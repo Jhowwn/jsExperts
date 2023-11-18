@@ -1,0 +1,42 @@
+import mocha from 'mocha';
+const { describe, it } = mocha;
+import chai from 'chai';
+const {expect } = chai;
+import Person from '../src/person.js';
+
+describe('Person', () => {
+  it('Should return a person instance from a string', () => {
+    const person = Person.generateInstanceFromString(
+      '2 bike,carro 20000 2020-01-01 2020-08-01'
+    )
+    const expected = {
+      from: '2020-01-01',
+      to:  '2020-08-01',
+      kmTraveled: '20000', 
+      vehicles: ['bike', 'carro'],
+      id: '2', 
+    }
+
+    expect(person).to.be.deep.equal(expected);
+  })
+
+  it('Should format values', () => {
+    const person = new Person({
+      from: '2020-01-01',
+      to:  '2020-08-01',
+      kmTraveled: '20000', 
+      vehicles: ['bike', 'carro'],
+      id: '2', 
+    })
+    const result = person.formatted("pt-BR")
+    const expected = {
+      id: 2,
+      vehicles: 'bike e carro',
+      kmTraveled: '20.000 km',
+      from: '01 de janeiro de 2020',
+      to: '01 de agosto de 2020'
+    }
+
+    expect(result).to.be.deep.equal(expected)
+  })
+})

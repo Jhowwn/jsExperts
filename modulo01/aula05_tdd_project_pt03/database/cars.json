@@ -1,0 +1,23 @@
+[
+  {
+    "id": "5f0f8666-1220-48f0-a89e-11e3e312c091",
+    "name": "Charger",
+    "releaseYear": 2021,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "9c69e1ce-d213-4b14-b87c-7d59b1024b49",
+    "name": "Prius",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "a443abb1-e876-4b88-9867-90a8495d36e2",
+    "name": "Prius",
+    "releaseYear": 2021,
+    "available": true,
+    "gasAvailable": true
+  }
+]
