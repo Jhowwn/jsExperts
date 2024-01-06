@@ -1,0 +1,26 @@
+regex101.com
+^\d{3}.\d{3}.\d{3}-\d{2}$
+
+123.123.123-14
+456.456.456-78
+789.789.789-12
+
+replace [.-] - vazio
+
+teste, testfy
+doe, john
+trant, tarty
+
+replace: ^(\w+),(\s\w+)$
+{firstName: "$2", lastName: "$1"}
+
+o [Jhonatan](https://jhonatan.com) desenvolve e testa aplicações você devia seguir ele no [Twitter](http://twitter.com/jhonatan) ou ate no [Instagram](https://instagram.com/jhonatan)
+
+ah e pode pesquisar no [Google](https://google.com)
+vai lá!
+
+\[(.*?)\]\(([http|https].*?)\)
+<a href="$2">$1</a>
+
+
+(\w+):\s.*
